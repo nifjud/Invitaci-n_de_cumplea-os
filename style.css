@@ -147,7 +147,7 @@ body {
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 12.5rem;
+  bottom: 202px;
 }
 
 .candle::before {
@@ -169,7 +169,7 @@ body {
     opacity: 1;
   }
   to {
-    transform: rotate(47deg) scale(1.1);
+    transform: rotate(47deg) scale(1.4);
     opacity: 0.8;
   }
 }
@@ -231,3 +231,4 @@ body {
     font-size: 1rem;
   }
 }
+
