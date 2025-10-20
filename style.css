@@ -1,116 +1,147 @@
+/* 🌈 Variables globales */
+:root {
+    --color-primario: #4997d0;
+    --color-texto: #000046;
+    --color-azul: #0045ff;
+    --color-gris-oscuro: #5c5c5c;
+    --color-gris-claro: #e0e0e0;
+    --color-flama: #ff8d00;
+    --fuente-base: "Poppins", sans-serif;
+    --fuente-mono: "Fira Code", monospace;
+    --transicion: 0.8s ease;
+}
+
+/* 🔄 Reset básico */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
+
+/* 🧍‍♂️ Cuerpo */
 body {
-    background-color: #4997d0;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    color: whit
+    background-color: var(--color-primario);
+    font-family: var(--fuente-mono);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+/* 🧾 Nombre */
+#Nombre {
+    color: var(--color-azul);
+    font-family: var(--fuente-base);
+}
+
+/* 💌 Tarjeta */
 .card {
-    width: 640px;
-    height: 400px;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    -webkit-perspective: 1200px;
-    perspective: 1200;
-    transition: 1s;
+    width: 40rem;
+    height: 25rem;
+    perspective: 1200px;
+    transition: transform var(--transicion);
+    position: relative;
 }
+
 .card:hover {
     transform: rotate(-5deg);
 }
+
 .card:hover .outside {
     transform: rotateY(-130deg);
 }
+
+/* 📖 Interior y exterior */
 .outside,
 .inside {
     height: 100%;
     width: 50%;
     position: absolute;
-    left: 50.1%;
+    left: 50%;
 }
+
 .inside {
-    background: linear-gradient(to right,#e0e0e0,#ffffff 30%);
-    line-height: 3;
-    padding: 0 20px;
+    background: linear-gradient(to right, var(--color-gris-claro), #fff 30%);
+    line-height: 1.6;
+    padding: 1rem 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    left: 50%;
 }
+
 .outside {
-    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    z-index: 1;
     transform-origin: left;
-    transition: 2s;
+    transition: transform 2s ease;
+    z-index: 1;
 }
+
+/* 📄 Caras */
 .front,
 .back {
     height: 100%;
     width: 100%;
     position: absolute;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transform: rotateX(0deg);
 }
+
 .front {
-    background-color: #ffffff;
+    background-color: #fff;
 }
+
 .back {
     transform: rotateY(180deg);
-    background: linear-gradient(to left,#e0e0e0, #ffffff 30%);
+    background: linear-gradient(to left, var(--color-gris-claro), #fff 30%);
 }
+
+/* 🎂 Pastel */
 .cake {
     width: 100%;
     position: absolute;
-    bottom: 30px;
+    bottom: 2rem;
 }
+
 .top_layer,
 .middle_layer,
 .bottom_layer {
-    height: 80px;
-    width: 240px;
+    height: 5rem;
+    width: 15rem;
     background-repeat: repeat;
     background-size: 60px 100px;
     background-position: 28px 0;
-    background-image: linear-gradient(
-        transparent 50px,
-        #9f9f9f 50px,        
-        #5c5c5c 60px,        
-        transparent 60px
-        ),    
+    background-image: 
+        linear-gradient(
+            transparent 50px,
+            #9f9f9f 50px,
+            var(--color-gris-oscuro) 60px,
+            transparent 60px
+        ),
         radial-gradient(circle at 30px 5px, #572c0a 30px, #fcbf29 31px);
     border-radius: 10px 10px 0 0;
     position: relative;
     margin: auto;
 }
+
 .middle_layer {
     transform: scale(0.85);
     top: 6px;
 }
+
 .top_layer {
     transform: scale(0.7);
     top: 26px;
 }
+
+/* 🕯️ Vela */
 .candle {
     height: 45px;
     width: 15px;
     background: repeating-linear-gradient(
         45deg,
-        #0045ff 0,
-        #0045ff 5px,
+        var(--color-azul) 0,
+        var(--color-azul) 5px,
         #656565 5px,
         #5e5e5e 10px
     );
@@ -118,29 +149,80 @@ body {
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 202px;
+    bottom: 12.5rem;
 }
-.candle:before {
+
+.candle::before {
     content: "";
     position: absolute;
     height: 16px;
     width: 16px;
-    background-color: #ff8d00;
+    background-color: var(--color-flama);
     border-radius: 0 50% 50% 50%;
     bottom: 48px;
     transform: rotate(45deg);
-    left: -1px
-}
-.outside p {
-    font-size: 23px;
-    text-transform: uppercase;
-    margin-top: 30px;
-    text-align: center;
-    letter-spacing: 6px;
-    color: #000046;
-}
-.inside h1 {
-    font-size: 120px;
-    line-height: 120px;
+    left: -1px;
+    animation: flame 1.2s infinite alternate ease-in-out;
 }
 
+/* 🔥 Animación de la llama */
+@keyframes flame {
+    from {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(47deg) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ✨ Texto */
+.outside p {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    color: var(--color-texto);
+    font-family: var(--fuente-base);
+}
+
+.inside h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: var(--fuente-base);
+}
+
+.inside p {
+    font-size: 1.2rem;
+    font-family: var(--fuente-base);
+}
+
+/* 📱 Responsividad */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+        transform: none !important;
+    }
+
+    .inside,
+    .outside {
+        width: 100%;
+        left: 0;
+    }
+
+    .inside h1 {
+        font-size: 2.2rem;
+    }
+
+    .inside p {
+        font-size: 1rem;
+    }
+
+    .cake {
+        transform: scale(0.8);
+        bottom: 1rem;
+    }
+}
