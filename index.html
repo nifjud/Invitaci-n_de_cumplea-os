@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarjeta de Cumpleaños</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Cumpleaños</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Fira+Code&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-    <!-- Hoja de estilos -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="card">
-        <div class="outside">
-            <div class="front">
-                <!-- 🎉 Texto curvo con SVG -->
-                <div class="curved-text">
-                    <svg viewBox="0 0 500 150">
-                        <path id="wavePath" fill="transparent" d="M10,80 Q150,10 250,80 T490,80" />
-                        <text font-size="28" fill="#000046" letter-spacing="4">
-                            <textPath href="#wavePath" startOffset="50%" text-anchor="middle">
-                                🎉 Happy Birthday 🎉
-                            </textPath>
-                        </text>
-                    </svg>
-                </div>
-
-                <!-- 🎂 Pastel -->
-                <div class="cake">
-                    <div class="top_layer"></div>
-                    <div class="middle_layer"></div>
-                    <div class="bottom_layer"></div>
-                    <div class="candle"></div>
-                </div>
-            </div>
-            <div class="back"></div>
+  <div class="card">
+    <div class="outside">
+      <div class="front">
+        <!-- Texto curvo -->
+        <div class="curved-text">
+          <svg viewBox="0 0 500 150">
+            <path id="wavePath" fill="transparent" d="M10,80 Q150,20 250,80 T490,80" />
+            <text font-size="26" fill="#000046" letter-spacing="4">
+              <textPath href="#wavePath" startOffset="50%" text-anchor="middle">
+                🎉 Happy Birthday 🎉
+              </textPath>
+            </text>
+          </svg>
         </div>
 
-        <div class="inside">
-            <h1 id="Nombre">Eleazar Urlá</h1>
-            <p>¡Te invita a su fiesta de cumpleaños!</p>
-            <p><strong>📅 Fecha:</strong> Viernes 24 de octubre</p>
-            <p><strong>🕕 Hora:</strong> 6:30 p.m.</p>
-            <p><strong>📍 Lugar:</strong> Casa de Papá-Mamá Urlá</p>
+        <!-- Pastel -->
+        <div class="cake">
+          <div class="top_layer"></div>
+          <div class="middle_layer"></div>
+          <div class="bottom_layer"></div>
+          <div class="candle"></div>
         </div>
+      </div>
+      <div class="back"></div>
     </div>
+
+    <div class="inside">
+      <h1 id="Nombre">Eleazar Urlá</h1>
+      <p>¡Te invita a su fiesta de cumpleaños!</p>
+      <p><strong>📅 Fecha:</strong> Viernes 24 de octubre</p>
+      <p><strong>🕕 Hora:</strong> 6:30 p.m.</p>
+      <p><strong>📍 Lugar:</strong> Casa de Papá-Mamá Urlá</p>
+    </div>
+  </div>
 </body>
 </html>
