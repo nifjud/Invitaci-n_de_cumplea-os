@@ -1,230 +1,233 @@
-/* 🌈 Variables globales */
 :root {
-    --color-primario: #4997d0;
-    --color-texto: #000046;
-    --color-azul: #0045ff;
-    --color-gris-oscuro: #5c5c5c;
-    --color-gris-claro: #e0e0e0;
-    --color-flama: #ff8d00;
-    --fuente-base: "Poppins", sans-serif;
-    --fuente-mono: "Fira Code", monospace;
-    --transicion: 0.8s ease;
+  --color-primario: #4997d0;
+  --color-texto: #000046;
+  --color-azul: #0045ff;
+  --color-gris-oscuro: #5c5c5c;
+  --color-gris-claro: #e0e0e0;
+  --color-flama: #ff8d00;
+  --fuente-base: "Poppins", sans-serif;
+  --transicion: 0.8s ease;
 }
 
-/* 🔄 Reset básico */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 🧍‍♂️ Cuerpo */
 body {
-    background-color: var(--color-primario);
-    font-family: var(--fuente-mono);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  background-color: var(--color-primario);
+  font-family: var(--fuente-base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* 🧾 Nombre */
-#Nombre {
-    color: var(--color-azul);
-    font-family: var(--fuente-base);
-}
-
-/* 💌 Tarjeta */
+/* Tarjeta */
 .card {
-    width: 40rem;
-    height: 25rem;
-    perspective: 1200px;
-    transition: transform var(--transicion);
-    position: relative;
+  width: 40rem;
+  height: 25rem;
+  perspective: 1200px;
+  position: relative;
+  transition: transform var(--transicion);
 }
 
 .card:hover {
-    transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 .card:hover .outside {
-    transform: rotateY(-130deg);
+  transform: rotateY(-130deg);
 }
 
-/* 📖 Interior y exterior */
 .outside,
 .inside {
-    height: 100%;
-    width: 50%;
-    position: absolute;
-    left: 50%;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
 }
 
 .inside {
-    background: linear-gradient(to right, var(--color-gris-claro), #fff 30%);
-    line-height: 1.6;
-    padding: 1rem 2rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  background: linear-gradient(to right, var(--color-gris-claro), #fff 30%);
+  line-height: 1.6;
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .outside {
-    transform-style: preserve-3d;
-    transform-origin: left;
-    transition: transform 2s ease;
-    z-index: 1;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 2s ease;
+  z-index: 1;
 }
 
-/* 📄 Caras */
 .front,
 .back {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    backface-visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
 }
 
 .front {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .back {
-    transform: rotateY(180deg);
-    background: linear-gradient(to left, var(--color-gris-claro), #fff 30%);
+  transform: rotateY(180deg);
+  background: linear-gradient(to left, var(--color-gris-claro), #fff 30%);
 }
 
-/* 🌊 Texto curvo */
+/* Texto curvo */
 .curved-text {
-    width: 100%;
-    text-align: center;
-    margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .curved-text svg {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 80px;
 }
 
-/* 🎂 Pastel */
+/* Pastel */
 .cake {
-    width: 100%;
-    position: absolute;
-    bottom: 2rem;
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
 }
 
 .top_layer,
 .middle_layer,
 .bottom_layer {
-    height: 5rem;
-    width: 15rem;
-    background-repeat: repeat;
-    background-size: 60px 100px;
-    background-position: 28px 0;
-    background-image: 
-        linear-gradient(
-            transparent 50px,
-            #9f9f9f 50px,
-            var(--color-gris-oscuro) 60px,
-            transparent 60px
-        ),
-        radial-gradient(circle at 30px 5px, #572c0a 30px, #fcbf29 31px);
-    border-radius: 10px 10px 0 0;
-    position: relative;
-    margin: auto;
+  height: 5rem;
+  width: 15rem;
+  background-repeat: repeat;
+  background-size: 60px 100px;
+  background-position: 28px 0;
+  background-image: linear-gradient(
+      transparent 50px,
+      #9f9f9f 50px,
+      var(--color-gris-oscuro) 60px,
+      transparent 60px
+    ),
+    radial-gradient(circle at 30px 5px, #572c0a 30px, #fcbf29 31px);
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  margin: auto;
 }
 
 .middle_layer {
-    transform: scale(0.85);
-    top: 6px;
+  transform: scale(0.85);
+  top: 6px;
 }
 
 .top_layer {
-    transform: scale(0.7);
-    top: 26px;
+  transform: scale(0.7);
+  top: 26px;
 }
 
-/* 🕯️ Vela */
 .candle {
-    height: 45px;
-    width: 15px;
-    background: repeating-linear-gradient(
-        45deg,
-        var(--color-azul) 0,
-        var(--color-azul) 5px,
-        #656565 5px,
-        #5e5e5e 10px
-    );
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 202.5px;
+  height: 45px;
+  width: 15px;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-azul) 0,
+    var(--color-azul) 5px,
+    #656565 5px,
+    #5e5e5e 10px
+  );
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 202.5px;
 }
 
 .candle::before {
-    content: "";
-    position: absolute;
-    height: 16px;
-    width: 16px;
-    background-color: var(--color-flama);
-    border-radius: 0 50% 50% 50%;
-    bottom: 48px;
-    transform: rotate(45deg);
-    left: -1px;
-    animation: flame 1.2s infinite alternate ease-in-out;
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background-color: var(--color-flama);
+  border-radius: 0 50% 50% 50%;
+  bottom: 48px;
+  transform: rotate(45deg);
+  left: -1px;
+  animation: flame 1.2s infinite alternate ease-in-out;
 }
 
-/* 🔥 Animación de la llama */
 @keyframes flame {
-    from {
-        transform: rotate(45deg) scale(1);
-        opacity: 1;
-    }
-    to {
-        transform: rotate(47deg) scale(1.3);
-        opacity: 0.8;
-    }
+  from {
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(47deg) scale(1.3);
+    opacity: 0.8;
+  }
 }
 
-/* ✨ Texto interior */
+/* Texto interior */
 .inside h1 {
-    font-size: 3rem;
-    line-height: 1.2;
-    font-family: var(--fuente-base);
+  font-size: 2.5rem;
+  color: var(--color-azul);
+  margin-bottom: 0.8rem;
 }
 
 .inside p {
-    font-size: 1.2rem;
-    font-family: var(--fuente-base);
+  font-size: 1.1rem;
+  margin: 0.3rem 0;
 }
 
-/* 📱 Responsividad */
+/* 📱 Versión móvil */
 @media (max-width: 768px) {
-    .card {
-        width: 90%;
-        height: auto;
-        transform: none !important;
-    }
+  body {
+    height: auto;
+    padding: 1rem;
+  }
 
-    .inside,
-    .outside {
-        width: 100%;
-        left: 0;
-    }
+  .card {
+    width: 100%;
+    height: auto;
+    transform: none !important;
+  }
 
-    .inside h1 {
-        font-size: 2.2rem;
-    }
+  .outside,
+  .inside {
+    width: 100%;
+    left: 0;
+    position: relative;
+  }
 
-    .inside p {
-        font-size: 1rem;
-    }
+  .outside {
+    transform: none;
+    position: relative;
+    margin-bottom: 1rem;
+  }
 
-    .cake {
-        transform: scale(0.8);
-        bottom: 1rem;
-    }
+  .curved-text svg text {
+    font-size: 20px;
+  }
+
+  .cake {
+    position: relative;
+    bottom: 0;
+    transform: scale(0.7);
+    margin-top: -1rem;
+  }
+
+  .inside h1 {
+    font-size: 1.8rem;
+  }
+
+  .inside p {
+    font-size: 1rem;
+  }
 }
