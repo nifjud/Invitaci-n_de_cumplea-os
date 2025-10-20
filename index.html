@@ -15,7 +15,19 @@
     <div class="card">
         <div class="outside">
             <div class="front">
-                <p>🎉 Happy Birthday 🎉</p>
+                <!-- 🎉 Texto curvo con SVG -->
+                <div class="curved-text">
+                    <svg viewBox="0 0 500 150">
+                        <path id="wavePath" fill="transparent" d="M10,80 Q150,10 250,80 T490,80" />
+                        <text font-size="28" fill="#000046" letter-spacing="4">
+                            <textPath href="#wavePath" startOffset="50%" text-anchor="middle">
+                                🎉 Happy Birthday 🎉
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
+
+                <!-- 🎂 Pastel -->
                 <div class="cake">
                     <div class="top_layer"></div>
                     <div class="middle_layer"></div>
