@@ -5,11 +5,12 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: lightblue;
+    background-color: #4997d0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    color: whit
 }
 .card {
     width: 640px;
@@ -86,11 +87,11 @@ body {
     background-position: 28px 0;
     background-image: linear-gradient(
         transparent 50px,
-        #fedbab 50px,        
-        #fedbab 60px,        
+        #9f9f9f 50px,        
+        #5c5c5c 60px,        
         transparent 60px
         ),    
-        radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+        radial-gradient(circle at 30px 5px, #572c0a 30px, #fcbf29 31px);
     border-radius: 10px 10px 0 0;
     position: relative;
     margin: auto;
@@ -108,27 +109,27 @@ body {
     width: 15px;
     background: repeating-linear-gradient(
         45deg,
-        #fd3018 0,
-        #fd3018 5px,
-        #ffa98e 5px,
-        #ffa98e 10px
+        #0045ff 0,
+        #0045ff 5px,
+        #656565 5px,
+        #5e5e5e 10px
     );
     position: absolute;
     margin: auto;
     left: 0;
     right: 0;
-    bottom: 200px;
+    bottom: 202px;
 }
 .candle:before {
     content: "";
     position: absolute;
     height: 16px;
     width: 16px;
-    background-color: #ffa500;
+    background-color: #ff8d00;
     border-radius: 0 50% 50% 50%;
     bottom: 48px;
     transform: rotate(45deg);
-    left: -1px;
+    left: -1px
 }
 .outside p {
     font-size: 23px;
