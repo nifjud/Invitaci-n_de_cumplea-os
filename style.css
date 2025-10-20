@@ -5,11 +5,7 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-image: url('stumble_guys_image.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
-    background-color: lightgreen;
+    background-color: lightblue;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -146,3 +142,4 @@ body {
     font-size: 120px;
     line-height: 120px;
 }
+
