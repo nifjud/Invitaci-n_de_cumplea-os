@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Birthday Card</title>
 
-  <!-- Google Font (corregido) -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
@@ -16,43 +15,27 @@
   <div class="card">
     <div class="outside">
       <div class="front">
-        <!-- Texto curvado (SVG con textPath) -->
-        <div class="curved-text" aria-hidden="true">
-          <svg viewBox="0 0 600 110" preserveAspectRatio="xMidYMid meet" class="curved-svg">
-            <defs>
-              <!-- arco para el texto -->
-              <path id="arc" d="M40,80 C160,10 440,10 560,80"></path>
-            </defs>
-            <text dy="-6">
-              <textPath href="#arc" startOffset="50%" text-anchor="middle">🎉 Happy Birthday 🎉</textPath>
-            </text>
-          </svg>
-        </div>
+        <p class="greeting">¡Feliz Cumpleaños!</p>
 
-        <!-- Nombre grande -->
-        <h1 class="name">Eleazar Urlá</h1>
-
-        <!-- Pastel (estructura flexible para escalar) -->
-        <div class="cake" role="img" aria-label="Pastel de cumpleaños">
-          <div class="layer bottom_layer"></div>
-          <div class="layer middle_layer"></div>
+        <div class="cake">
+          <div class="candle"><span class="flame"></span></div>
           <div class="layer top_layer"></div>
-          <div class="candle" aria-hidden="true">
-            <span class="flame"></span>
-          </div>
+          <div class="layer middle_layer"></div>
+          <div class="layer bottom_layer"></div>
         </div>
       </div>
 
-      <div class="back" aria-hidden="true">
-        <!-- espacio para reverso si se quiere -->
+      <div class="back">
+        <!-- cara interior de la tapa (se gira para mostrar el interior) -->
       </div>
     </div>
 
     <div class="inside">
-      <h2 class="inside-title">¡Te invita a su fiesta de cumpleaños!</h2>
+      <h2 id="Nombre_cumpleañero">Eleazar Urlá</h2>
+      <p class="info">¡Te invita a su fiesta de cumpleaños!</p>
       <p class="info"><strong>📅 Fecha:</strong> Viernes 24 de octubre</p>
       <p class="info"><strong>🕒 Hora:</strong> 6:30 p.m.</p>
-      <p class="info"><strong>📍 Lugar:</strong> Casa de Papá-Mamá Urlá</p>
+      <p class="info"><strong>🗺️ Lugar:</strong> Casa de Papá-Mamá Urlá</p>
     </div>
   </div>
 </body>
